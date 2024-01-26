@@ -72,7 +72,7 @@ class SimpleExecutionSystem(BaseExecutionSystem):
             except KeyError:
                 logError('You have specified Dollar Limit but Price Feature Key does not exist')
 
-    def getInstrumentExecutionsFromExecutions(time, executions):
+    def getInstrumentExecutionsFromExecutions(self, time, executions):
         instrumentExecutions = []
         for (instrumentId, position) in executions.iteritems():
             if position == 0:
